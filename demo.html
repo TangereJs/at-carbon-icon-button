@@ -1,0 +1,80 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+  <head>
+    <title>at-carbon-icon-button demo</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../paper-styles/color.html">
+    <link rel="import" href="at-carbon-icon-button.html">
+
+    <style is="custom-style">
+      at-carbon-icon-button {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h3>Buttons can use at-carbon-icons or external images, and can be disabled</h3>
+      <at-carbon-icon-button icon="favorite" title="heart"></at-carbon-icon-button>
+      <at-carbon-icon-button src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="octocat" title="octocat"></at-carbon-icon-button>
+      <at-carbon-icon-button disabled icon="reply" title="reply"></at-carbon-icon-button>
+      
+      <h3>Buttons can hide the ripple effect using the <i>noink</i> attribute</h3>
+      <at-carbon-icon-button noink icon="find-in-page" title="find"></at-carbon-icon-button>
+
+      <h3>Buttons can be styled using regular CSS and custom properties</h3>
+      <style is="custom-style">
+        at-carbon-icon-button.pink {
+          color: var(--paper-pink-500);
+          --at-carbon-icon-button-ink-color: var(--paper-indigo-500);
+        }
+        at-carbon-icon-button.pink:hover {
+          background-color: var(--paper-pink-500);
+          color: white;
+        }
+        at-carbon-icon-button.blue {
+          --at-carbon-icon-button-ink-color: var(--paper-orange-500);
+          background-color: var(--paper-light-blue-500);
+          color: white;
+          border-radius: 3px;
+          padding: 2px;
+        }
+      </style>
+      <at-carbon-icon-button icon="favorite" title="heart" class="pink"></at-carbon-icon-button>
+      <at-carbon-icon-button icon="flight-takeoff" title="take off" class="blue"></at-carbon-icon-button>
+
+      <h3>Buttons can be resized</h3>
+      <style is="custom-style">
+        at-carbon-icon-button.giant {
+          width: 100px;
+          height: 100px;
+        }
+      </style>
+      <at-carbon-icon-button icon="alarm-on" title="wake up" class="giant"></at-carbon-icon-button>
+
+      <h3>Buttons can be used as a link</h3>
+      <a href="https://www.polymer-project.org" tabindex="-1">
+        <at-carbon-icon-button icon="polymer"></at-carbon-icon-button>
+      </a>
+      <style>
+        a at-carbon-icon-button,
+        a:active at-carbon-icon-button,
+        a:visited at-carbon-icon-button {
+          color: #000000;
+        }
+      </style>
+    </div>
+  </body>
+</html>
