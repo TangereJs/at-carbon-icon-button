@@ -9,8 +9,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 
 <link rel="import" href="../polymer/polymer.html">
-<link rel="import" href="../at-carbon-icon/at-carbon-icon.html">
-<!-- <link rel="import" href="../paper-behaviors/paper-inky-focus-behavior.html"> -->
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../paper-behaviors/paper-inky-focus-behavior.html">
 <link rel="import" href="../paper-styles/default-theme.html">
 
 <!--
@@ -24,12 +24,12 @@ from the icon set to use.
 
     <at-carbon-icon-button icon="menu"></at-carbon-icon-button>
 
-See [`at-carbon-iconset`](#at-carbon-iconset) for more information about
+See [`iron-iconset`](#iron-iconset) for more information about
 how to use a custom icon set.
 
 Example:
 
-    <link href="path/to/at-carbon-icons/at-carbon-icons.html" rel="import">
+    <link href="path/to/iron-icons/iron-icons.html" rel="import">
 
     <at-carbon-icon-button icon="favorite"></at-carbon-icon-button>
     <at-carbon-icon-button src="star.png"></at-carbon-icon-button>
@@ -45,7 +45,7 @@ as well by setting its tabindex to -1.
 ### Styling
 
 Style the button with CSS as you would a normal DOM element. If you are using the icons
-provided by `at-carbon-icons`, they will inherit the foreground color of the button.
+provided by `iron-icons`, they will inherit the foreground color of the button.
 
     /* make a red "favorite" button */
     <at-carbon-icon-button icon="favorite" style="color: red;"></at-carbon-icon-button>
@@ -111,13 +111,13 @@ Custom property | Description | Default
         @apply(--at-carbon-icon-button-hover);
       }
 
-      at-carbon-icon {
-        --at-carbon-icon-width: 100%;
-        --at-carbon-icon-height: 100%;
+      iron-icon {
+        --iron-icon-width: 100%;
+        --iron-icon-height: 100%;
       }
     </style>
 
-    <at-carbon-icon id="icon" src="[[src]]" icon="[[icon]]" alt$="[[alt]]"></at-carbon-icon>
+    <iron-icon id="icon" src="[[src]]" icon="[[icon]]" alt$="[[alt]]"></iron-icon>
   </template>
 
   <script>
@@ -129,9 +129,9 @@ Custom property | Description | Default
         tabindex: '0'
       },
 
-      /*behaviors: [
+      behaviors: [
         Polymer.PaperInkyFocusBehavior
-      ],*/
+      ],
 
       properties: {
         /**
