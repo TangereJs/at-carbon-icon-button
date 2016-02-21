@@ -9,95 +9,83 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html>
-  <head>
-    <title>at-carbon-icon-button demo</title>
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
-    <script src="../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../iron-icons/iron-icons.html">
-    <link rel="import" href="../paper-styles/color.html">
-    <link rel="import" href="../iron-demo-helpers/demo-snippet.html">
-    <link rel="import" href="../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="at-carbon-icon-button.html">
+<head>
+  <title>at-carbon-icon-button demo</title>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <style is="custom-style" include="demo-pages-shared-styles">
-      at-carbon-icon-button {
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-    </style>
-  </head>
-  <body unresolved>
-    <div class="vertical-section-container centered">
-      <h3>Buttons can use iron-icons or external images, and can be disabled</h3>
-      <demo-snippet class="centered-demo">
-        <template>
-          <at-carbon-icon-button icon="favorite" title="heart"></at-carbon-icon-button>
-          <at-carbon-icon-button src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="octocat" title="octocat"></at-carbon-icon-button>
-          <at-carbon-icon-button disabled icon="reply" title="reply"></at-carbon-icon-button>
-        </template>
-      </demo-snippet>
+  <link rel="import" href="../../iron-icons/iron-icons.html">
+  <link rel="import" href="../paper-styles/color.html">
+  <link rel="import" href="../iron-demo-helpers/demo-snippet.html">
+  <link rel="import" href="../iron-demo-helpers/demo-pages-shared-styles.html">
+  <link rel="import" href="../paper-icon-button/paper-icon-button.html">
+  <link rel="import" href="at-carbon-icon-button.html">
 
-      <h3>Buttons can hide the ripple effect using the <i>noink</i> attribute</h3>
-      <demo-snippet class="centered-demo">
-        <template>
-          <at-carbon-icon-button noink icon="find-in-page" title="find"></at-carbon-icon-button>
-        </template>
-      </demo-snippet>
+  <style is="custom-style" include="demo-pages-shared-styles">
+    at-carbon-icon-button {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
 
-      <h3>Buttons can be styled using regular CSS and custom properties</h3>
-      <demo-snippet class="centered-demo">
-        <template>
-          <style is="custom-style">
-            at-carbon-icon-button.pink {
-              color: var(--paper-pink-500);
-              --at-carbon-icon-button-ink-color: var(--paper-indigo-500);
-            }
-            at-carbon-icon-button.pink:hover {
-              background-color: var(--paper-pink-500);
-              color: white;
-            }
-            at-carbon-icon-button.blue {
-              --at-carbon-icon-button-ink-color: var(--paper-orange-500);
-              background-color: var(--paper-light-blue-500);
-              color: white;
-              border-radius: 3px;
-              padding: 2px;
-            }
-          </style>
-          <at-carbon-icon-button icon="favorite" title="heart" class="pink"></at-carbon-icon-button>
-          <at-carbon-icon-button icon="flight-takeoff" title="take off" class="blue"></at-carbon-icon-button>
-        </template>
-      </demo-snippet>
+<body unresolved>
+  
+  <div class="vertical-section-container centered">
 
-      <h3>Buttons can be resized</h3>
-      <demo-snippet class="centered-demo">
-        <template>
-          <style is="custom-style">
-            at-carbon-icon-button.giant {
-              width: 100px;
-              height: 100px;
-            }
-          </style>
-          <at-carbon-icon-button icon="alarm-on" title="wake up" class="giant"></at-carbon-icon-button>
-        </template>
-      </demo-snippet>
+    <h3>Buttons can be disabled with the <i>disabled</i> attribute</h3>
+    <demo-snippet class="centered-demo">
+      <template>
+        <at-carbon-icon-button icon="now:star" title="star"></at-carbon-icon-button>
+        <at-carbon-icon-button disabled icon="now:play" title="play"></at-carbon-icon-button>
+      </template>
+    </demo-snippet>
 
-      <h3>Buttons can be used as a link</h3>
-      <demo-snippet class="centered-demo">
-        <template>
-          <a href="https://www.polymer-project.org" tabindex="-1">
-            <at-carbon-icon-button icon="polymer"></at-carbon-icon-button>
-          </a>
-          <style>
-            a at-carbon-icon-button,
-            a:active at-carbon-icon-button,
-            a:visited at-carbon-icon-button {
-              color: #000000;
-            }
-          </style>
-        </template>
-      </demo-snippet>
-    </div>
-  </body>
+    <h3>Buttons can hide the ripple effect using the <i>noink</i> attribute</h3>
+    <demo-snippet class="centered-demo">
+      <template>
+        <at-carbon-icon-button noink icon="now:search" title="search"></at-carbon-icon-button>
+      </template>
+    </demo-snippet>
+
+    <h3>Buttons can be styled using the theme palette</h3>
+    <demo-snippet class="centered-demo">
+      <template>
+        <at-carbon-icon-button icon="now:star" title="star" color="red"></at-carbon-icon-button>
+        <at-carbon-icon-button icon="now:plane" title="take off" color="green"></at-carbon-icon-button>
+      </template>
+    </demo-snippet>
+
+    <h3>Buttons can be resized</h3>
+    <demo-snippet class="centered-demo">
+      <template>
+        <style is="custom-style">
+          at-carbon-icon-button.giant {
+            width: 100px;
+            height: 100px;
+          }
+        </style>
+        <at-carbon-icon-button icon="now:alert" title="wake up" class="giant"></at-carbon-icon-button>
+      </template>
+    </demo-snippet>
+
+    <h3>Buttons can be used as a link</h3>
+    <demo-snippet class="centered-demo">
+      <template>
+        <a href="https://www.polymer-project.org" tabindex="-1">
+          <at-carbon-icon-button icon="now:exit"></at-carbon-icon-button>
+        </a>
+        <style>
+          a at-carbon-icon-button,
+          a:active at-carbon-icon-button,
+          a:visited at-carbon-icon-button {
+            color: #000000;
+          }
+        </style>
+      </template>
+    </demo-snippet>
+  </div>
+</body>
+
 </html>
