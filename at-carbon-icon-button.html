@@ -50,8 +50,13 @@
   <script>
     Polymer({
       is: 'at-carbon-icon-button',
-
-
+      hostAttributes: {
+        role: 'button',
+        tabindex: '0'
+      },
+      behaviors: [
+        Polymer.PaperInkyFocusBehavior
+      ],
       properties: {
 
         /**
@@ -70,19 +75,18 @@
           type: String,
           observer: "_altChanged"
         },
-        
+
         disabled: {
           type: Boolean,
           value: false,
-          reflectToAttribute: true    
+          reflectToAttribute: true
         },
 
         color: {
           type: String,
           value: ''
         },
-        
-                        
+
         _iconColor: {
           type: String,
           computed: '_computeIconColor(color,disabled)'
@@ -90,12 +94,12 @@
 
       },
 
-      _computeIconColor: function(color, disabled) {        
+      _computeIconColor: function(color, disabled) {
         if(disabled) return "";
         if(!!color) return color;
         return "blue";
       },
-            
+
       _altChanged: function(newValue, oldValue) {
         var label = this.getAttribute('aria-label');
 
