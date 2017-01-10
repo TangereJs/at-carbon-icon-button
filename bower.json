@@ -3,9 +3,9 @@
   "version": "0.0.0.1",
   "private": true,
   "dependencies": {
-    "tangere": "TangereJs/tangere#0.8-preview",
-    "at-carbon-icon-color": "TangereJs/at-carbon-icon-color#0.8-preview",
-    "at-doc-viewer": "TangereJs/at-doc-viewer#0.8-preview",
+    "tangere": "TangereJs/tangere#master",
+    "at-carbon-icon-color": "TangereJs/at-carbon-icon-color#master",
+    "at-doc-viewer": "TangereJs/at-doc-viewer#master",
     "paper-behaviors": "PolymerElements/paper-behaviors#master",
     "paper-styles": "PolymerElements/paper-styles#master",
     "iron-icons": "PolymerElements/iron-icons#master",
