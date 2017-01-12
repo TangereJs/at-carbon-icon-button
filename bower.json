@@ -5,8 +5,7 @@
   "dependencies": {
     "tangere": "TangereJs/tangere#master",
     "at-carbon-icon-color": "TangereJs/at-carbon-icon-color#master",
-    "at-doc-viewer": "TangereJs/at-doc-viewer#master",
-    "paper-behaviors": "PolymerElements/paper-behaviors#master",
+    "at-doc-viewer": "TangereJs/at-doc-viewer#master",  
     "paper-styles": "PolymerElements/paper-styles#master",
     "iron-icons": "PolymerElements/iron-icons#master",
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#master",
