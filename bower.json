@@ -6,7 +6,7 @@
     "tangere": "TangereJs/tangere#0.8-preview",
     "at-carbon-icon-color": "TangereJs/at-carbon-icon-color#0.8-preview",
     "at-doc-viewer": "TangereJs/at-doc-viewer#0.8-preview",    
-    "paper-styles": "PolymerElements/paper-styles#master",
+    "paper-styles": "TangereJs/paper-styles#0.8-preview",
     "iron-icons": "PolymerElements/iron-icons#master",   
     "paper-icon-button": "PolymerElements/paper-icon-button#master"
   }
