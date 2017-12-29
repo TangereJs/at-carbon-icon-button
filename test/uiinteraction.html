@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>at-carbon-icon-button tests</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <link rel="import" href="../at-carbon-icon-button.html">
+  <link rel="import" href="../../iron-test-helpers/iron-test-helpers.html" />
+</head>
+
+<body>
+  <test-fixture id="propertyTests">
+    <template>
+      <at-carbon-icon-button></at-carbon-icon-button>
+    </template>
+  </test-fixture>
+
+  <script>
+    suite('ui interaction tests', function() {
+      
+      test('ui interaction test', function() {
+        var elt = fixture('propertyTests');
+        var ico = elt.$.icon;
+
+        assert.equal(ico.icon, "");
+        assert.equal(ico.getAttribute('alt'), "");
+        assert.equal(ico.color, "blue");
+
+        elt.icon = "now:about";
+
+        assert.equal(ico.icon, "now:about");
+        assert.equal(ico.getAttribute('alt'), "");
+        assert.equal(ico.color, "blue");
+
+        elt.alt = "lorem ipsum";
+
+        assert.equal(ico.icon, "now:about");
+        assert.equal(ico.getAttribute('alt'), "lorem ipsum");
+        assert.equal(ico.color, "blue");
+
+        elt.color = "orange";
+        assert.equal(ico.icon, "now:about");
+        assert.equal(ico.getAttribute('alt'), "lorem ipsum");
+        assert.equal(ico.color, "orange");
+
+        elt.disabled = true;
+        
+        assert.equal(ico.icon, "now:about");
+        assert.equal(ico.getAttribute('alt'), "lorem ipsum");
+        assert.equal(ico.color, "");
+
+      });
+
+    });
+  </script>
+</body>
+</html>
