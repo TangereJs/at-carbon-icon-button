@@ -27,7 +27,11 @@
         /* Because of polymer/2558, this style has lower specificity than * */
         box-sizing: border-box !important;
 
-        @apply(--at-carbon-icon-button);
+        @apply --at-carbon-icon-button;
+      }
+
+      :host([hidden]) {
+        display: none !important;
       }
 
       :host #ink {
