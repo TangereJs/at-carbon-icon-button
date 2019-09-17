@@ -3,6 +3,7 @@
 <link rel="import" href="../at-carbon-icon-color/at-carbon-icon-color.html">
 <link rel="import" href="../paper-behaviors/paper-inky-focus-behavior.html">
 <link rel="import" href="../paper-styles/default-theme.html">
+<link rel="import" href="../at-carbon-badge/at-carbon-badge.html">
 
 <dom-module id="at-carbon-icon-button">
   <template strip-whitespace>
@@ -53,6 +54,7 @@
     </style>
 
     <at-carbon-icon-color id="icon" icon="[[icon]]" alt$="[[alt]]" color="[[_iconColor]]"></at-carbon-icon-color>
+    <at-carbon-badge id="badge" hidden$="{{_computeBadgeHidden(badgeLabel, badgeColor)}}" label="[[badgeLabel]]" color="[[badgeColor]]" on-click="_closeBadgeOnClick"> </at-carbon-badge>
   </template>
 
   <script>
@@ -100,6 +102,23 @@
         _iconColor: {
           type: String,
           computed: '_computeIconColor(color,disabled)'
+        },
+
+        badgeColor: {
+          type: String,
+          value: '',
+          observer: '_badgeColorChanged'
+        },
+
+        badgeLabel: {
+          type: String,
+          value: '',
+          observer: '_badgeLabelChanged'
+        },
+
+        badgeCloseOnClick: {
+          type: Boolean,
+          value: false
         }
 
       },
@@ -117,7 +136,23 @@
         if (!label || oldValue == label) {
           this.setAttribute('aria-label', newValue);
         }
+      },
+
+      _computeBadgeHidden: function(badgeLabel, badgeColor) {
+        if(badgeLabel != "" && badgeColor != "") {
+          return false;
+        } else {
+          return true;
+        }
+      },
+
+      _closeBadgeOnClick: function(event) {
+        if(this.badgeCloseOnClick == true) {
+          this.badgeLabel = "";
+          this.badgeColor = "";
+        }
       }
+
     });
   </script>
 </dom-module>
