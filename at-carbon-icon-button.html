@@ -54,7 +54,7 @@
     </style>
 
     <at-carbon-icon-color id="icon" icon="[[icon]]" alt$="[[alt]]" color="[[_iconColor]]"></at-carbon-icon-color>
-    <at-carbon-badge id="badge" hidden$="{{_computeBadgeHidden(badgeLabel, badgeColor)}}" label="[[badgeLabel]]" color="[[badgeColor]]" on-click="_closeBadgeOnClick"> </at-carbon-badge>
+    <at-carbon-badge id="badge" x-offset="-8" y-offset="-4" hidden$="{{_computeBadgeHidden(badgeLabel, badgeColor)}}" label="[[badgeLabel]]" color="[[badgeColor]]" on-click="_closeBadgeOnClick"> </at-carbon-badge>
   </template>
 
   <script>
