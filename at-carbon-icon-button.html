@@ -41,9 +41,7 @@
       }
 
       :host([disabled]) {
-        color: var(--at-carbon-icon-button-disabled-text, --disabled-text-color);
-        pointer-events: none;
-        cursor: auto;
+        @apply --at-form-disabled;
       }
 
       at-carbon-icon-color {
@@ -122,7 +120,7 @@
       },
 
       _computeIconColor: function(color, disabled) {
-        if(disabled) return "grey";
+        if(disabled) return "";
         if(!!color) return color;
         return "blue";
       },
